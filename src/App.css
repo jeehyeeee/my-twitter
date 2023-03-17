@@ -1,0 +1,159 @@
+body {
+  background-color: #000;
+  /* height: 100%; */
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 600px;
+  /* margin-left: 30px; */
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  /* box-sizing: border-box; */
+}
+.bird {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+.bird-button {
+  width: 55px;
+  height: 55px;
+  border: 1px solid black;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.bird-button:hover {
+  border: 1px solid #000d1a;
+  background: #000d1a;
+  border-radius: 100px;
+}
+.content-wrapper {
+  width: 1317px;
+  display: flex;
+  align-items: flex-start;
+  display: flex;
+}
+.content {
+  width: 100%;
+  max-width: 600px;
+  color: lightgray;
+  border: 1px solid rgb(47, 51, 54);
+
+  /* box-shadow: 0 0 0 1px rgb(47, 51, 54); */
+}
+.searchbar {
+  border-bottom: 1px solid rgb(47, 51, 54);
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.back-button,
+.setting {
+  color: rgb(239, 243, 244);
+  padding-top: 18px;
+}
+.searchicon {
+  margin-top: 13px;
+  padding-left: 12px;
+}
+.search {
+  width: 446px;
+  height: 44px;
+  margin-top: 5px;
+  background-color: rgb(32, 35, 39);
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+.setting {
+  /* width: 20px; */
+  color: rgb(239, 243, 244);
+  /* fill: currentColor; */
+}
+.post {
+  display: flex;
+  height: 100vh;
+  padding: 12px 20px;
+}
+.head {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.body {
+  width: 100%;
+  height: 100%;
+}
+.user-id {
+  font-weight: bold;
+  /* font-weight: 700; */
+}
+.text {
+  margin-top: 5px;
+}
+.sidebar {
+  color: rgb(239, 243, 244);
+  /* border: 1px solid black; */
+  box-shadow: 0 0 0 1px rgb(47, 51, 54);
+}
+.sidebar {
+  width: 348px;
+  height: 288px;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 20px;
+}
+.twitter-greeting {
+  margin: 10px;
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(239, 243, 244);
+}
+.signup {
+  height: 15px;
+  color: rgb(94, 102, 113);
+  font-size: 13px;
+  padding-left: 10px;
+}
+.google-signup {
+  width: 300px;
+  height: 40px;
+  margin-left: 5px;
+  color: #3c4043;
+  background-color: #fff;
+  margin: 18px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+.google-icon {
+  width: 20px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: flex-start;
+}
+.image {
+  margin-top: 8px;
+  /* border: 1px solid rgb(47, 51, 54); */
+}
+
+.image2 {
+  width: auto;
+  height: auto;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 15px;
+}
