@@ -6,6 +6,7 @@ import { CgMoreAlt } from "react-icons/cg";
 import { FcGoogle } from "react-icons/fc";
 import "./App.css";
 import catimage from "./image/First cat.jpeg";
+import PostComponent from "./PostComponent";
 
 function App() {
   return (
@@ -34,19 +35,7 @@ function App() {
                 <CgMoreAlt size={20} />
               </div>
             </div>
-            <div className="post">
-              <div className="head">
-                <div className="profile">
-                  <FaGithubAlt size={40} />
-                </div>
-              </div>
-              <div className="body">
-                <div className="user-id">Jeehyeee_</div>
-                <div className="text">고양이귀여워나만고양이없어</div>
-                <div className="image"></div>
-                <img src={catimage} className="image2" />
-              </div>
-            </div>
+            <PostComponent />
           </div>
           <div className="sidebar">
             <section className="twitter-greeting">트위터에 처음이세요?</section>
