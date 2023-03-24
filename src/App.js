@@ -5,20 +5,37 @@ import { IoArrowBackSharp } from "react-icons/io5";
 import { CgMoreAlt } from "react-icons/cg";
 import { FcGoogle } from "react-icons/fc";
 import "./App.css";
-import catimage from "./image/First cat.jpeg";
 import PostComponent from "./PostComponent";
 import ModalBasic from "./ModalBasic";
-import AppModalBasic from "./AppModalBasic";
+import ModalScroll from "./ModalScroll";
+
 import { useState } from "react";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const showModal = () => {
-    setModalOpen(false);
-  };
+  const [modalScroll, setmodalScroll] = useState(true);
+  // const openModal = () => {
+  //   setModalOpen(true);
+  //   document.body.style.overflow = "hidden";
+  // };
+  // const closeModal = () => {
+  //   setModalOpen(false);
+  //   document.body.style.overflow = "unset";
+  // };
+  // ModalBasic이 true면 스크롤막기 false면 스크롤 활성화
+
+  useEffect(() => {
+    document.body.style = `overflow: hidden`;
+    return () => (document.body.style = `overflow: auto`);
+  }, []);
+
+
   return (
     <div>
-      {modalOpen ? <ModalBasic /> : null}
+      <ModalScroll />
+
+    
+      {modalOpen ? <ModalBasic setModalOpen={setModalOpen} /> : null}
       <div className="wrapper">
         <header className="left">
           <div className="bird">
@@ -67,5 +84,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
