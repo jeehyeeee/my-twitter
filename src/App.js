@@ -20,7 +20,6 @@ function App() {
           <div className="bird">
             <a className="bird-button">
               <FaDove size={27} color="lightgray" />
-              {/* <FaDove size={27} color="lightgray" /> */}
             </a>
           </div>
         </header>
@@ -42,9 +41,11 @@ function App() {
             <PostComponent />
           </div>
           <div className="sidebar">
-            <section className="twitter-greeting">트위터에 처음이세요?</section>
+            <section className="twitter-greeting">
+              최신 소식을 놓치지 마세요
+            </section>
             <section className="signup">
-              지금 가입해서 나에게 맞춤 설정된 타임라인을 만들어 보세요!
+              트위터를 사용하면 가장 먼저 알게 됩니다.
             </section>
             <section
               onClick={() => setModalOpen(true)}
@@ -53,7 +54,7 @@ function App() {
               <section className="google-icon">
                 <FcGoogle size={20} />
               </section>
-              Google 계정으로 가입하기
+              Google 계정으로 로그인하기
             </section>
           </div>
         </main>

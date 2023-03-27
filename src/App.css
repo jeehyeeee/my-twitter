@@ -123,9 +123,10 @@ body::-webkit-scrollbar {
 }
 .signup {
   height: 15px;
-  color: rgb(94, 102, 113);
-  font-size: 13px;
-  padding-left: 10px;
+  color: rgb(239, 243, 244);
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 15px;
 }
 .google-signup {
   width: 300px;
