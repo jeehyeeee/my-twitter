@@ -1,7 +1,9 @@
 body {
   background-color: #000;
-
   /* height: 100%; */
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .wrapper {
   display: flex;
@@ -260,4 +262,3 @@ body {
   background-color: rgba(36, 45, 54, 0.4);
   position: fixed;
 }
-

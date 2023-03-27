@@ -1,5 +1,4 @@
 import { FaDove } from "react-icons/fa";
-import { FaGithubAlt } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import { IoArrowBackSharp } from "react-icons/io5";
 import { CgMoreAlt } from "react-icons/cg";
@@ -7,35 +6,15 @@ import { FcGoogle } from "react-icons/fc";
 import "./App.css";
 import PostComponent from "./PostComponent";
 import ModalBasic from "./ModalBasic";
-import ModalScroll from "./ModalScroll";
-
 import { useState } from "react";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalScroll, setmodalScroll] = useState(true);
-  // const openModal = () => {
-  //   setModalOpen(true);
-  //   document.body.style.overflow = "hidden";
-  // };
-  // const closeModal = () => {
-  //   setModalOpen(false);
-  //   document.body.style.overflow = "unset";
-  // };
-  // ModalBasic이 true면 스크롤막기 false면 스크롤 활성화
-
-  useEffect(() => {
-    document.body.style = `overflow: hidden`;
-    return () => (document.body.style = `overflow: auto`);
-  }, []);
-
 
   return (
     <div>
-      <ModalScroll />
+      <ModalBasic modalOpen={modalOpen} setModalOpen={setModalOpen} />
 
-    
-      {modalOpen ? <ModalBasic setModalOpen={setModalOpen} /> : null}
       <div className="wrapper">
         <header className="left">
           <div className="bird">
@@ -68,9 +47,7 @@ function App() {
               지금 가입해서 나에게 맞춤 설정된 타임라인을 만들어 보세요!
             </section>
             <section
-              onClick={() => {
-                setModalOpen(true);
-              }}
+              onClick={() => setModalOpen(true)}
               className="google-signup"
             >
               <section className="google-icon">

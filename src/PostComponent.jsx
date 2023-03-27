@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { FaGithubAlt } from "react-icons/fa";
-import catimage from "./image/First cat.jpeg";
 import "./App.css";
 
 const PostComponent = () => {
