@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { useState } from "react";
 
-const buttonInfos = [
+const loginButtonInfo = [
   {
     buttonName: "google",
     buttonIcon: <FcGoogle size={20} />,
@@ -17,7 +17,7 @@ const buttonInfos = [
   },
 ];
 
-const buttonInfos2 = [
+const signupButtonInfo = [
   {
     buttonName: "google",
     buttonIcon: <FcGoogle size={20} />,
@@ -68,16 +68,18 @@ export default function ModalBasic({ modalOpen, setModalOpen }) {
               : "트위터에 로그인하기"}
           </p>
           {/* buttonInfos 를 map 으로 돌려서 만들기~! */}
-          {(isClickedSignUp ? buttonInfos2 : buttonInfos).map((buttonInfo) => {
-            return (
-              <div className={buttonInfo.buttonName + 1}>
-                <p className={buttonInfo.buttonName}>
-                  {buttonInfo.buttonIcon}
-                  {buttonInfo.buttonLabel}
-                </p>
-              </div>
-            );
-          })}
+          {(isClickedSignUp ? signupButtonInfo : loginButtonInfo).map(
+            (buttonInfo) => {
+              return (
+                <div className={buttonInfo.buttonName + 1}>
+                  <p className={buttonInfo.buttonName}>
+                    {buttonInfo.buttonIcon}
+                    {buttonInfo.buttonLabel}
+                  </p>
+                </div>
+              );
+            }
+          )}
           <br />
           <div className="newUser">
             <p className="NewId">
