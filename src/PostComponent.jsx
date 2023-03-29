@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaGithubAlt } from "react-icons/fa";
-import "./App.css";
+// import "./App.css";
 import styled from "styled-components";
 
 const Extend = styled.div`
   display: flex;
-  justify-content: center
-`
+  justify-content: center;
+`;
 
 const Post = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const UserId = styled.div`
 const Text = styled.div`
   margin-top: 5px;
 `;
-const Image2 = styled.image`
+const Image2 = styled.img`
   width: 500px;
   height: 550px;
   margin-top: 7px;

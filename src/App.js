@@ -8,7 +8,13 @@ import PostComponent from "./PostComponent";
 import ModalBasic from "./ModalBasic";
 import { useState } from "react";
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: black;
+  }
+`;
 const LinkColor = "rgb(239, 243, 244)";
 const BodyColor = "#000";
 const BorderColor = "rgb(47, 51, 54)";
@@ -29,7 +35,7 @@ const SignUp = styled.div`
   color: #1d9bf0;
   font-size: 14px;
 `;
-const Google = styled(Extend)`
+const GoogleLogin = styled(Extend)`
   width: 20px;
   margin-right: 8px;
 `;
@@ -77,22 +83,20 @@ const Searchbar = styled.div`
 const BackButton = styled.div`
   color: ${LinkColor};
   padding-top: 18px;
-  margin-top: ${MarginTop};
+  margin-top: 5px;
   padding-left: ${PaddingLeft};
+  display: flex;
+  justify-content: center;
 `;
 const Search = styled.div`
   width: 446px;
   height: 44px;
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: ${BackgroundColor};
-  border-bottom: {
-    left-radius: 9999px;
-    right-radius: 9999px;
-  }
-  border-top: {
-    left-radius: 9999px;
-    right-radius: 9999px;
-  }
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
 `;
 const SearchIcon = styled.div`
   margin-top: ${MarginTop};
@@ -102,7 +106,7 @@ const SearchIcon = styled.div`
 
 const Setting = styled.div`
   color: ${LinkColor};
-  padding-top: 18px;
+  padding-top: 22px;
 `;
 const Sidebar = styled.div`
   color: ${LinkColor};
@@ -110,10 +114,8 @@ const Sidebar = styled.div`
   width: 348px;
   height: 288px;
   border-radius: 20px;
-  margin {
-    top: 20px;
-    left: 30px;
-  }
+  margin-top: 20px;
+  margin-left: 30px;
 `;
 const TwitterGreeting = styled.section`
   margin: 10px;
@@ -149,6 +151,7 @@ function App() {
 
   return (
     <div>
+      <GlobalStyle />
       <SignUp />
       <ModalBasic modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Wrapper>
@@ -187,9 +190,9 @@ function App() {
               onClick={() => setModalOpen(true)}
               className="google-signup"
             >
-              <Google className="google-icon">
+              <GoogleLogin className="google-icon">
                 <FcGoogle size={20} />
-              </Google>
+              </GoogleLogin>
               Google 계정으로 로그인하기
             </GoogleSignUp>
           </Sidebar>

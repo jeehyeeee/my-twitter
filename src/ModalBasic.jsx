@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import { FaDove } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
@@ -46,31 +46,34 @@ const Close = styled.button`
   cursor: pointer;
   border: 0;
   color: white;
-  background-color: rgb(32, 35, 39);
+  background-color: black;
   &:hover {
     border: 1px solid #1f2225;
     background: #1f2225;
     border-radius: 100px;
   }
 `;
-const BirdOne = styled(Extend)``;
+const BirdOne = styled(Extend)`
+  margin-top: 20px;
+`;
 const Login = styled(Extend)`
   color: #e7e9ea;
   font-weight: bold;
   font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 `;
-const NewUser = styled(Extend)``
-;
+const NewUser = styled(Extend)``;
 const NewId = styled.p`
   display: flex;
   color: white;
   font-size: 14px;
 `;
-const GoogleLogo = styled(Extend)`
+const Google = styled(Extend)`
   width: 350px;
   height: 50px;
-  margin: 10px;
-  margin-left: 15px;
+  /* margin:  30px; */
+  margin: 10px 30px;
   color: #3c4043;
   background-color: #fff;
   border-radius: 50px;
@@ -78,22 +81,21 @@ const GoogleLogo = styled(Extend)`
   letter-spacing: 0.25px;
   font-weight: 500;
   font-size: 15px;
+
   cursor: pointer;
 `;
+
 const Apple = styled(Extend)`
-  width: 350px;
-  height: 50px;
-  margin: 10px;
-  margin-left: 15px;
-  background-color: #fff;
-  border-radius: 50px;
   align-items: center;
-  letter-spacing: 0.25px;
-  font-weight: 500;
-  font-size: 15px;
-  color: #000;
-  cursor: pointer;
+  color: black;
 `;
+
+const GoogleApple = styled.div`
+  margin: 20px;
+`;
+
+// const Google1 = styled(Extend)``;
+
 const loginButtonInfo = [
   {
     buttonName: "google",
@@ -161,12 +163,14 @@ export default function ModalBasic({ modalOpen, setModalOpen }) {
           {(isClickedSignUp ? signupButtonInfo : loginButtonInfo).map(
             (buttonInfo) => {
               return (
-                <div className={buttonInfo.buttonName + 1}>
-                  <p className={buttonInfo.buttonName}>
-                    {buttonInfo.buttonIcon}
-                    {buttonInfo.buttonLabel}
-                  </p>
-                </div>
+                <GoogleApple className="GoogleApple">
+                  <Google className={buttonInfo.buttonName + 1}>
+                    <Apple className={buttonInfo.buttonName}>
+                      {buttonInfo.buttonIcon}
+                      {buttonInfo.buttonLabel}
+                    </Apple>
+                  </Google>
+                </GoogleApple>
               );
             }
           )}
