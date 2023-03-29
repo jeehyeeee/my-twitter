@@ -10,18 +10,19 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
 }
-.wrapper .left {
+
+.left {
   width: 600px;
   padding: 20px;
   display: flex;
   justify-content: flex-end;
 }
-.wrapper .left .bird {
+.left .bird {
   width: 400px;
   display: flex;
   justify-content: center;
 }
-.wrapper .left .bird .bird-button {
+.left .bird .bird-button {
   width: 55px;
   height: 55px;
   border: 1px solid #000;
@@ -31,7 +32,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   cursor: pointer;
 }
-.wrapper .left .bird .bird-button:hover {
+.left .bird .bird-button:hover {
   border: 1px solid #000d1a;
   background: #000d1a;
   border-radius: 100px;
@@ -105,56 +106,12 @@ body::-webkit-scrollbar {
   margin-top: 5px;
 }
 
-.sidebar {
-  color: rgb(239, 243, 244);
-  box-shadow: 0 0 0 1px rgb(47, 51, 54);
-  width: 348px;
-  height: 288px;
-  border-radius: 20px;
-}
-.sidebar margin {
-  top: 20px;
-  left: 30px;
-}
-
-.twitter-greeting {
-  margin: 10px;
-  padding-left: 5px;
-  color: rgb(239, 243, 244);
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .signup {
   height: 15px;
   color: rgb(239, 243, 244);
   padding-left: 15px;
   font-weight: bold;
   font-size: 14px;
-}
-
-.google-signup {
-  width: 300px;
-  height: 40px;
-  margin-left: 5px;
-  color: #3c4043;
-  background-color: #fff;
-  margin: 18px;
-  display: flex;
-  justify-content: center;
-  border-radius: 50px;
-  font-size: 14px;
-  align-items: center;
-  font-weight: 500;
-  letter-spacing: 0.25px;
-  cursor: pointer;
-}
-
-.google-icon {
-  width: 20px;
-  margin-right: 8px;
-  display: flex;
-  justify-content: flex-start;
 }
 
 .image {
@@ -257,11 +214,6 @@ body::-webkit-scrollbar {
   font-size: 14px;
 }
 
-.sign-up {
-  margin-left: 4px;
-  color: #1d9bf0;
-  font-size: 14px;
-}
 .sign-up:hover {
   cursor: pointer;
   text-decoration: underline;

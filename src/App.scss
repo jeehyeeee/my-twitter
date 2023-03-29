@@ -15,29 +15,29 @@ body {
 .wrapper {
   display: $display;
   flex-direction: row;
-  .left {
-    width: 600px;
-    padding: 20px;
+}
+.left {
+  width: 600px;
+  padding: 20px;
+  display: $display;
+  justify-content: flex-end;
+  .bird {
+    width: 400px;
     display: $display;
-    justify-content: flex-end;
-    .bird {
-      width: 400px;
+    justify-content: $justify-content;
+    .bird-button {
+      width: 55px;
+      height: 55px;
+      border: 1px solid $body-color;
+      background-color: $body-color;
       display: $display;
+      align-items: $justify-content;
       justify-content: $justify-content;
-      .bird-button {
-        width: 55px;
-        height: 55px;
-        border: 1px solid $body-color;
-        background-color: $body-color;
-        display: $display;
-        align-items: $justify-content;
-        justify-content: $justify-content;
-        cursor: pointer;
-        &:hover {
-          border: 1px solid #000d1a;
-          background: #000d1a;
-          border-radius: 100px;
-        }
+      cursor: pointer;
+      &:hover {
+        border: 1px solid #000d1a;
+        background: #000d1a;
+        border-radius: 100px;
       }
     }
   }
@@ -113,25 +113,25 @@ body {
   }
 }
 
-.sidebar {
-  color: $link-color;
-  box-shadow: 0 0 0 1px rgb(47, 51, 54);
-  width: 348px;
-  height: 288px;
-  border-radius: 20px;
-  margin {
-    top: 20px;
-    left: 30px;
-  }
-}
+// .sidebar {
+//   color: $link-color;
+//   box-shadow: 0 0 0 1px rgb(47, 51, 54);
+//   width: 348px;
+//   height: 288px;
+//   border-radius: 20px;
+//   margin {
+//     top: 20px;
+//     left: 30px;
+//   }
+// }
 
-.twitter-greeting {
-  margin: 10px;
-  padding-left: 5px;
-  color: $link-color;
-  font-weight: bold;
-  font-size: 20px;
-}
+// .twitter-greeting {
+//   margin: 10px;
+//   padding-left: 5px;
+//   color: $link-color;
+//   font-weight: bold;
+//   font-size: 20px;
+// }
 
 .signup {
   height: 15px;
@@ -141,28 +141,28 @@ body {
   font-size: 14px;
 }
 
-.google-signup {
-  width: 300px;
-  height: 40px;
-  margin-left: 5px;
-  color: #3c4043;
-  background-color: #fff;
-  margin: 18px;
-  display: $display;
-  justify-content: $justify-content;
-  border-radius: 50px;
-  font-size: 14px;
-  align-items: $justify-content;
-  font-weight: 500;
-  letter-spacing: 0.25px;
-  cursor: pointer;
-}
-.google-icon {
-  width: 20px;
-  margin-right: 8px;
-  display: $display;
-  justify-content: flex-start;
-}
+// .google-signup {
+//   width: 300px;
+//   height: 40px;
+//   margin-left: 5px;
+//   color: #3c4043;
+//   background-color: #fff;
+//   margin: 18px;
+//   display: $display;
+//   justify-content: $justify-content;
+//   border-radius: 50px;
+//   font-size: 14px;
+//   align-items: $justify-content;
+//   font-weight: 500;
+//   letter-spacing: 0.25px;
+//   cursor: pointer;
+// }
+// .google-icon {
+//   width: 20px;
+//   margin-right: 8px;
+//   display: $display;
+//   justify-content: flex-start;
+// }
 
 .image {
   margin-top: 8px;
@@ -262,15 +262,14 @@ body {
   font-size: 14px;
 }
 
-.sign-up {
-  margin-left: 4px;
-  color: #1d9bf0;
-  font-size: 14px;
-
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+// .sign-up {
+//   margin-left: 4px;
+//   color: #1d9bf0;
+//   font-size: 14px;
+// }
+.sign-up:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .modalBackground {
