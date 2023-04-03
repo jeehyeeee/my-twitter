@@ -3,98 +3,7 @@ import { FaDove } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { useState } from "react";
-import styled, { css } from "styled-components";
-
-const Extend = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-const SignUp = styled.div`
-  margin-left: 4px;
-  color: #1d9bf0;
-  font-size: 14px;
-  &:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-`;
-const Modalbgc = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(36, 45, 54, 0.4);
-  position: fixed;
-`;
-const Container = styled.div`
-  width: 450px;
-  height: 400px;
-  z-index: 999;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000;
-  border: 1px solid #000;
-  border-radius: 17px;
-`;
-const Close = styled.button`
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  cursor: pointer;
-  border: 0;
-  color: white;
-  background-color: black;
-  &:hover {
-    border: 1px solid #1f2225;
-    background: #1f2225;
-    border-radius: 100px;
-  }
-`;
-const BirdOne = styled(Extend)`
-  margin-top: 20px;
-`;
-const Login = styled(Extend)`
-  color: #e7e9ea;
-  font-weight: bold;
-  font-size: 35px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-`;
-const NewUser = styled(Extend)``;
-const NewId = styled.p`
-  display: flex;
-  color: white;
-  font-size: 14px;
-`;
-const Google = styled(Extend)`
-  width: 350px;
-  height: 50px;
-  /* margin:  30px; */
-  margin: 10px 30px;
-  color: #3c4043;
-  background-color: #fff;
-  border-radius: 50px;
-  align-items: center;
-  letter-spacing: 0.25px;
-  font-weight: 500;
-  font-size: 15px;
-
-  cursor: pointer;
-`;
-
-const Apple = styled(Extend)`
-  align-items: center;
-  color: black;
-`;
-
-const GoogleApple = styled.div`
-  margin: 20px;
-`;
-
-// const Google1 = styled(Extend)``;
+import styled from "styled-components";
 
 const loginButtonInfo = [
   {
@@ -194,3 +103,91 @@ export default function ModalBasic({ modalOpen, setModalOpen }) {
     return null;
   }
 }
+const Extend = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const SignUp = styled.div`
+  margin-left: 4px;
+  color: #1d9bf0;
+  font-size: 14px;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+`;
+const Modalbgc = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(36, 45, 54, 0.4);
+  position: fixed;
+`;
+const Container = styled.div`
+  width: 450px;
+  height: 400px;
+  z-index: 999;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 17px;
+`;
+const Close = styled.button`
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  border: 0;
+  color: white;
+  background-color: black;
+  &:hover {
+    border: 1px solid #1f2225;
+    background: #1f2225;
+    border-radius: 100px;
+  }
+`;
+const BirdOne = styled(Extend)`
+  margin-top: 20px;
+`;
+const Login = styled(Extend)`
+  color: #e7e9ea;
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+`;
+const NewUser = styled(Extend)``;
+const NewId = styled.p`
+  display: flex;
+  color: white;
+  font-size: 14px;
+`;
+const Google = styled(Extend)`
+  width: 350px;
+  height: 50px;
+  /* margin:  30px; */
+  margin: 10px 30px;
+  color: #3c4043;
+  background-color: #fff;
+  border-radius: 50px;
+  align-items: center;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  font-size: 15px;
+
+  cursor: pointer;
+`;
+
+const Apple = styled(Extend)`
+  align-items: center;
+  color: black;
+`;
+
+const GoogleApple = styled.div`
+  margin: 20px;
+`;

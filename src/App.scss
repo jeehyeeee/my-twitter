@@ -141,28 +141,28 @@ body {
   font-size: 14px;
 }
 
-// .google-signup {
-//   width: 300px;
-//   height: 40px;
-//   margin-left: 5px;
-//   color: #3c4043;
-//   background-color: #fff;
-//   margin: 18px;
-//   display: $display;
-//   justify-content: $justify-content;
-//   border-radius: 50px;
-//   font-size: 14px;
-//   align-items: $justify-content;
-//   font-weight: 500;
-//   letter-spacing: 0.25px;
-//   cursor: pointer;
-// }
-// .google-icon {
-//   width: 20px;
-//   margin-right: 8px;
-//   display: $display;
-//   justify-content: flex-start;
-// }
+.google-signup {
+  width: 300px;
+  height: 40px;
+  margin-left: 5px;
+  color: #3c4043;
+  background-color: #fff;
+  margin: 18px;
+  display: $display;
+  justify-content: $justify-content;
+  border-radius: 50px;
+  font-size: 14px;
+  align-items: $justify-content;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+}
+.google-icon {
+  width: 20px;
+  margin-right: 8px;
+  display: $display;
+  justify-content: flex-start;
+}
 
 .image {
   margin-top: 8px;
@@ -262,11 +262,11 @@ body {
   font-size: 14px;
 }
 
-// .sign-up {
-//   margin-left: 4px;
-//   color: #1d9bf0;
-//   font-size: 14px;
-// }
+.sign-up {
+  margin-left: 4px;
+  color: #1d9bf0;
+  font-size: 14px;
+}
 .sign-up:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -276,5 +276,5 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: rgba(36, 45, 54, 0.4);
-  position: fixed;
+  position: fixed; 
 }

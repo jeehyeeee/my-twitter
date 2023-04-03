@@ -9,6 +9,64 @@ import ModalBasic from "./ModalBasic";
 import { useState } from "react";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+// import { usePosts } from "./store";
+
+function App() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  return (
+    <div>
+      <GlobalStyle />
+      <SignUp />
+      <ModalBasic modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <Wrapper>
+        <Left className="left">
+          <Bird className="bird">
+            <BirdButton className="bird-button">
+              <FaDove size={27} color="lightgray" />
+            </BirdButton>
+          </Bird>
+        </Left>
+        <ContentWrapper className="content-wrapper">
+          <Content className="content">
+            <Searchbar className="searchbar">
+              <BackButton className="back-button">
+                <IoArrowBackSharp size={20} />
+              </BackButton>
+              <Search className="search">
+                <SearchIcon className="searchicon">
+                  <BiSearch size={20} color="808080" />
+                </SearchIcon>
+              </Search>
+              <Setting className="setting">
+                <CgMoreAlt size={20} />
+              </Setting>
+            </Searchbar>
+            <PostComponent />
+          </Content>
+          <Sidebar className="sidebar">
+            <TwitterGreeting paddingleft="5px" className="twitter-greeting">
+              최신 소식을 놓치지 마세요
+            </TwitterGreeting>
+            <Sign paddingleft="15px" className="signup">
+              트위터를 사용하면 가장 먼저 알게 됩니다.
+            </Sign>
+            <GoogleSignUp
+              onClick={() => setModalOpen(true)}
+              className="google-signup"
+            >
+              <GoogleLogin className="google-icon">
+                <FcGoogle size={20} />
+              </GoogleLogin>
+              Google 계정으로 로그인하기
+            </GoogleSignUp>
+          </Sidebar>
+        </ContentWrapper>
+      </Wrapper>
+
+    </div>
+  );
+}
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -146,59 +204,4 @@ const GoogleSignUp = styled(Extend)`
   letter-spacing: 0.25px;
   cursor: pointer;
 `;
-function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  return (
-    <div>
-      <GlobalStyle />
-      <SignUp />
-      <ModalBasic modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <Wrapper>
-        <Left className="left">
-          <Bird className="bird">
-            <BirdButton className="bird-button">
-              <FaDove size={27} color="lightgray" />
-            </BirdButton>
-          </Bird>
-        </Left>
-        <ContentWrapper className="content-wrapper">
-          <Content className="content">
-            <Searchbar className="searchbar">
-              <BackButton className="back-button">
-                <IoArrowBackSharp size={20} />
-              </BackButton>
-              <Search className="search">
-                <SearchIcon className="searchicon">
-                  <BiSearch size={20} color="808080" />
-                </SearchIcon>
-              </Search>
-              <Setting className="setting">
-                <CgMoreAlt size={20} />
-              </Setting>
-            </Searchbar>
-            <PostComponent />
-          </Content>
-          <Sidebar className="sidebar">
-            <TwitterGreeting paddingleft="5px" className="twitter-greeting">
-              최신 소식을 놓치지 마세요
-            </TwitterGreeting>
-            <Sign paddingleft="15px" className="signup">
-              트위터를 사용하면 가장 먼저 알게 됩니다.
-            </Sign>
-            <GoogleSignUp
-              onClick={() => setModalOpen(true)}
-              className="google-signup"
-            >
-              <GoogleLogin className="google-icon">
-                <FcGoogle size={20} />
-              </GoogleLogin>
-              Google 계정으로 로그인하기
-            </GoogleSignUp>
-          </Sidebar>
-        </ContentWrapper>
-      </Wrapper>
-    </div>
-  );
-}
 export default App;
