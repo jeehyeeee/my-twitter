@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FaGithubAlt } from "react-icons/fa";
 // import "./App.css";
 import styled from "styled-components";
-import { create } from "zustand";
 import { usePosts } from "./components/store";
 
 const PostComponent = () => {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
 
-  const TwitterPosts = usePosts((state) => state.posts);
-  const setTwitterPosts = usePosts((state) => state.setPosts);
-  setTwitterPosts([1, 2, 3]);
+  const posts = usePosts((state) => state.posts);
+  const setPosts = usePosts((state) => state.setPosts);
 
   useEffect(() => {
     fetch("/data/tweet.json")
@@ -24,8 +22,6 @@ const PostComponent = () => {
   return (
     <>
       {posts.map((data, index) => {
-        // console.log(index);
-
         return (
           <Post className="post" key={data.userId}>
             <Head className="head">

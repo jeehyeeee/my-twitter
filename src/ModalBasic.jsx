@@ -2,8 +2,8 @@
 import { FaDove } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { useState } from "react";
 import styled from "styled-components";
+import { useSignUp, useModal } from "./components/store";
 
 const loginButtonInfo = [
   {
@@ -42,10 +42,14 @@ function scrollOff() {
   // console.log("스크롤안된당ㅋ");
 }
 
-export default function ModalBasic({ modalOpen, setModalOpen }) {
+export default function ModalBasic({ modalOpen }) {
   // console.log(setModalOpen);
   // 모달 끄기
-  const [isClickedSignUp, setIsClickedSignUp] = useState(false);
+  // const [isClickedSignUp, setIsClickedSignUp] = useState(false);
+
+  const isClickedSignUp = useSignUp((state) => state.isClickedSignUp);
+  const setIsClickedSignUp = useSignUp((state) => state.setIsClickedSignUp);
+  const setModalOpen = useModal((state) => state.setModalOpen);
 
   const closeModal = () => {
     setModalOpen(false);

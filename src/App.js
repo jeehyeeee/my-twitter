@@ -9,11 +9,12 @@ import ModalBasic from "./ModalBasic";
 import { useState } from "react";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-// import { usePosts } from "./store";
+import { useModal } from "./components/store";
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-
+  // const [modalOpen, setModalOpen] = useState(false);
+  const modalOpen = useModal((state) => state.modalOpen);
+  const setModalOpen = useModal((state) => state.setModalOpen);
   return (
     <div>
       <GlobalStyle />
@@ -63,7 +64,6 @@ function App() {
           </Sidebar>
         </ContentWrapper>
       </Wrapper>
-
     </div>
   );
 }
